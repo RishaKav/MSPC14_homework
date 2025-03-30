@@ -4,11 +4,11 @@ class Product:
         self.price = price
 
     def display_info(self):
-        print(f"Product: {self.name}, Price: ${self.price:.2f}")
+        print(f"Product: {self.name}, Price: {self.price:.2f}")
 
 class ShoppingCart:
     def __init__(self):
-        self.items = {}  # Format: {product.name: {"product": product, "quantity": quantity}}
+        self.items = {} 
 
     def add_product(self, product: Product, quantity: int):
         if product.name in self.items:
@@ -38,7 +38,7 @@ class ShoppingCart:
             print("Shopping Cart:")
             for item in self.items.values():
                 product, quantity = item["product"], item["quantity"]
-                print(f"{product.name} - Quantity: {quantity}, Price: ${product.price:.2f} each")
+                print(f"{product.name} - Quantity: {quantity}, Price: {product.price:.2f} each")
             print(f"Total Cost: ${self.calculate_total():.2f}")
 
 # Example usage:
