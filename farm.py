@@ -1,9 +1,7 @@
 from abc import ABC, abstractmethod
 from collections import defaultdict
 
-# -------------------------------
 # Animal Base Class (Abstract)
-# -------------------------------
 class Animal(ABC):
     def __init__(self, name: str, age: int):
         self._name = name
@@ -23,9 +21,6 @@ class Animal(ABC):
         return self.__class__.__name__
 
 
-# -------------------------------
-# Animal Subclasses
-# -------------------------------
 class Cow(Animal):
     def make_sound(self):
         print(f"{self._name} says Moo!")
@@ -50,9 +45,7 @@ class Sheep(Animal):
         return "Wool"
 
 
-# -------------------------------
 # FarmStructure Class
-# -------------------------------
 class FarmStructure:
     def __init__(self, name: str, structure_type: str):
         self._name = name
@@ -62,9 +55,7 @@ class FarmStructure:
         return f"{self._name} ({self._type})"
 
 
-# -------------------------------
 # Farm Class
-# -------------------------------
 class Farm:
     def __init__(self, name="The Belval Farm"):
         self._name = name
@@ -101,9 +92,8 @@ class Farm:
         print(f"Collected products: {', '.join(products)}")
 
 
-# -------------------------------
 # Demo Setup with Desired Output
-# -------------------------------
+
 if __name__ == "__main__":
     # Create farm
     my_farm = Farm()
