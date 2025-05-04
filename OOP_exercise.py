@@ -41,7 +41,7 @@ class ShoppingCart:
                 print(f"{product.name} - Quantity: {quantity}, Price: {product.price:.2f} each")
             print(f"Total Cost: ${self.calculate_total():.2f}")
 
-# Example usage:
+
 if __name__ == "__main__":
     apple = Product("Apple", 0.5)
     banana = Product("Banana", 0.3)
